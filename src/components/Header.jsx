@@ -1,8 +1,27 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 
 function Header() {
   return (
-    <header>Header</header>
+    <header className='w-full p-4 flex justify-center items-center border-b-2 border-gray-300'>
+      <nav>
+        <ul className='flex gap-4'>
+          <li><NavLink to="/" className={({ isActive }) =>
+            isActive ? "text-componyColor text-xl transition-all" :
+              "text-gray-900 text-xl transition-all hover:text-componyColor"
+          }>Home</NavLink></li>
+
+          <li><NavLink to="login" className={({ isActive }) =>
+            isActive ? "text-componyColor text-xl transition-all" :
+              "text-gray-900 text-xl transition-all hover:text-componyColor"
+          }>Login</NavLink></li>
+          <li><NavLink to="profile" className={({ isActive }) =>
+            isActive ? "text-componyColor text-xl transition-all" :
+              "text-gray-900 text-xl transition-all hover:text-componyColor"
+          }>Profile</NavLink></li>
+        </ul>
+      </nav>
+    </header>
   )
 }
 
