@@ -1,7 +1,11 @@
 module.exports = {
-  content: ["./src/**/*.{html, js, jsx}"],
+  content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        componyColor: "#cf441e"
+      }
+    },
   },
   plugins: [],
 }
